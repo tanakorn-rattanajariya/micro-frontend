@@ -1,12 +1,22 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0';
-import {_FormItem,FormItemProps} from './Item'
+import FormItem,{FormItemProps} from './Item'
 export default {
   title: "Form/Item",
-  component: _FormItem,
-  argTypes: {},
+  component: FormItem,
 } as Meta;
 
-const Template: Story<FormItemProps> = (args) => <_FormItem {...args} />;
+const Template: Story<FormItemProps> = (args) => <FormItem {...args} />;
 
-export const FormItem = Template.bind({});
+export const _FormItem = Template.bind({});
+_FormItem.args = {
+  label: "Form Item Example",
+  layout: {
+    wrapperCol: {
+      span: 8,
+      offset: 16,
+    },
+  },
+  required: true,
+  name: "example",
+};
