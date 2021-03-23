@@ -35,7 +35,8 @@
         ],
         "alias": {
           "styles": "./src/styles",
-          "model": "./src/model"
+          "model": "./src/model",
+          "stories": "./src/stories"
         }
       }
     ],
